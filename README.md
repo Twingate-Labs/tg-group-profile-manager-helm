@@ -19,3 +19,5 @@ $ helm install tg-group-profile-manager twingate-labs/tg-group-profile-manager -
 - `TG_API_KEY` can be generated in the Setting page within the Twingate Admin Console (Read and Write permission is required)
 - `TG_ACCOUNT` replace with your Twingate Network Address (e.g. _test1.twingate.com_)
 - `PROFILE_CONFIG` Your profile configuration (see notes and guidance in the [schema documentation](./docs/SCHEMA.md))
+
+For setting up https/ingress setup, see [setup with ingress](./docs/WITH_INGRESS.md)
