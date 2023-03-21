@@ -34,10 +34,23 @@ tolerations: []
 
 affinity: {}
 
+resources: {}
+# To set the requests and limits, uncomment the lines below, adjust the values, and
+# remove the curly braces after 'resources:' Or use the parameter --set resources.x.x
+# during the helm install command. For example, to set the request cpu,
+# --set resource.requests.cpu="250m"
+#  requests:
+#    cpu: "250m"
+#    memory: "128Mi"
+#  limits:
+#    cpu: "1"
+#    memory: "512Mi"
+
 variables:
   twingateAccount:
   twingateApiKey:
   slackSigningSecret:
   slackBotToken:
   profileConifg:
+# Keep the deployEnv value default (docker) for Kubernetes deployment
   deployEnv: "docker"

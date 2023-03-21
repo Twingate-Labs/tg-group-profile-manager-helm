@@ -21,3 +21,4 @@ $ helm install tg-group-profile-manager twingate-labs/tg-group-profile-manager -
 - `PROFILE_CONFIG` Your profile configuration (see notes and guidance in the [schema documentation](./docs/SCHEMA.md))
 
 For setting up with https/ingress, see [setup with ingress](./docs/WITH_INGRESS.md)
+For setting up with resource requests and limits, see the `resources` section in [value.yaml](./values.yaml)

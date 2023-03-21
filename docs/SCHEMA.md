@@ -1,4 +1,3 @@
-
 ## Profile configuration schema
 The schema consists of an object with the following properties:
 - _profiles_: List of Object, where each Object defines a Profile
