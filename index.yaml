@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   tg-group-profile-manager:
   - apiVersion: v2
-    appVersion: 0.0.4
+    appVersion: 0.0.5
     created: "2023-01-20T10:45:09.21274Z"
     description: Managing Twingate profile through Slack
     digest: da8c17ebfea8f0d0315ff42f739e66e2cbaf613d06487e048dd7897221abeeb2
