@@ -28,6 +28,11 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          {{- if .Values.externalSecretName }}
+          envFrom:
+            - secretRef:
+                name: {{ .Values.externalSecretName }}
+          {{- else }}
           env:
             - name: TG_ACCOUNT
               value: {{ .Values.variables.twingateAccount }}
@@ -41,6 +46,7 @@ spec:
               value: {{ .Values.variables.profileConfig | toJson | quote }}
             - name: DEPLOY_ENV
               value: {{ .Values.variables.deployEnv }}
+          {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
