@@ -28,14 +28,6 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
-          envFrom:
-            - secretRef:
-                { { - if .Values.connector.existingSecret } }
-                name: { { .Values.connector.existingSecret } }
-                { { - else } }
-                name: { { include "cn.fullname" . } }
-                { { - end } }
-                optional: false
           env:
             - name: TG_ACCOUNT
               value: {{ .Values.variables.twingateAccount }}

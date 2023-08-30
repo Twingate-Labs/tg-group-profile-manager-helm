@@ -47,7 +47,6 @@ resources: {}
 #    memory: "512Mi"
 
 variables:
-  existingSecret:
   twingateAccount:
   twingateApiKey:
   slackSigningSecret:
