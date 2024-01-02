@@ -3,9 +3,9 @@ entries:
   tg-group-profile-manager:
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2024-01-02T13:09:29.227215Z"
+    created: "2024-01-02T13:39:00.688296Z"
     description: Managing Twingate profile through Slack
-    digest: 8d5af968d002b328d649c0ae0b9e66139ec2f1df7327b8a17461bc686af4d56c
+    digest: 7daff452fd6f8f111c4f97a7fbca51ecf08b04dfe2ea2a821d6801edec87fd50
     name: tg-group-profile-manager
     type: application
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2024-01-02T13:09:29.225792Z"
+    created: "2024-01-02T13:39:00.687791Z"
     description: Managing Twingate profile through Slack
     digest: 88b1cb76cb76ddff0cae8c73dbcc6b7fa3c91847148dda5de67ec8c5dd6ff7d7
     name: tg-group-profile-manager
@@ -21,4 +21,4 @@ entries:
     urls:
     - https://twingate-labs.github.io/tg-group-profile-manager-helm/tg-group-profile-manager-0.1.3.tgz
     version: 0.1.3
-generated: "2024-01-02T13:09:29.22489Z"
+generated: "2024-01-02T13:39:00.686991Z"
