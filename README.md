@@ -14,7 +14,7 @@ $ helm install tg-group-profile-manager twingate-labs/tg-group-profile-manager -
     --set-json='variables.profileConfig={"profiles":[{"profileName":"Example One Of Profile 1","profileType":"oneOf","groups":["Prod","Preprod","Testing"],"applicableToGroup":"Everyone"},{"profileName":"Example One Of Profile 2","profileType":"oneOf","groups":["US","EU","ASIA"],"applicableToGroup":"Everyone"},{"profileName":"Example Self-Serve Business Approvals","profileType":"selfServeApproval","groups":["HR","Finance","Sales"],"timeOptions": ["Forever", "1h", "8h", "24h", "7d", "30d", "90d"],"applicableToGroup":"Everyone","approverGroup":"IT"}, {"profileName":"Example Self-Serve Business Approvals 2","profileType":"selfServeApproval","groups":["HR","Finance","Sales"],"timeOptions": ["Forever", "1h", "8h", "24h"],"applicableToGroup":"Everyone","approverGroup":"IT"}],"groupPermissions":{"Prod":"Admin"}}'
 ```
 
-- `SLACK_SECRET` Slack signing secret
+- `SLACK_SIGNING_SECRET` Slack signing secret
 - `SLACK_BOT_TOKEN` Slack bot token (begins with `xoxb-`)
 - `TG_API_KEY` can be generated in the Setting page within the Twingate Admin Console (Read and Write permission is required)
 - `TG_ACCOUNT` replace with your Twingate Network Address (e.g. _test1.twingate.com_)
