@@ -28,12 +28,13 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
-          {{- if .Values.externalSecretName }}
-          envFrom:
-            - secretRef:
-                name: {{ .Values.externalSecretName }}
-          {{- else }}
           env:
+            - name: PROFILE_CONFIG
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ include "tg-group-profile-manager.fullname" . }}
+                  key: profile-config.json
+            {{- if not .Values.externalSecretName }}
             - name: TG_ACCOUNT
               value: {{ .Values.variables.twingateAccount }}
             - name: TG_API_KEY
@@ -42,10 +43,13 @@ spec:
               value: {{ .Values.variables.slackSigningSecret }}
             - name: SLACK_BOT_TOKEN
               value: {{ .Values.variables.slackBotToken }}
-            - name: PROFILE_CONFIG
-              value: {{ .Values.variables.profileConfig | toJson | quote }}
             - name: DEPLOY_ENV
               value: {{ .Values.variables.deployEnv }}
+            {{- end }}
+          {{- if .Values.externalSecretName }}
+          envFrom:
+            - secretRef:
+                name: {{ .Values.externalSecretName }}
           {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
